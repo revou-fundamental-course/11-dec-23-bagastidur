@@ -1,3 +1,8 @@
+@font-face {
+    font-family: coolvetica;
+    src: url(font/coolvetica.otf);
+}
+
 @media only screen and (max-width: 600px) {
     .header-wrapper {
         flex-direction: column;
@@ -14,12 +19,18 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: system-ui;
+    font-family: 'coolvetica';
+    margin: 0;
 }
 
 .head {
-    background-image: url("assets/bg.jpg");
+    background-image: linear-gradient(90deg, white, grey);
+    padding: 100px
 }
 
 .header-wrapper {
@@ -32,10 +43,22 @@ body {
     margin: 2px;
 }
 
-button {
+.button {
     background-color: white;
     margin: 2px;
-    border-radius: 5px;
+    font-family: coolvetica;
+    border: none;
+    border-radius: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+a {
+    margin: auto;
+}
+
+button:hover {
+    box-shadow: 2px 2px 2px gray
 }
 
 .logo {
@@ -43,13 +66,8 @@ button {
     max-width: 30px;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     text-align: center;
-}
-
-.pics {
-    display: flex;
-    justify-content: space-around;
 }
 
 .me, .vm, .braw {
@@ -60,18 +78,41 @@ h1, h2, p {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 5px 5px 20px black
 }
 
-.texts {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
 }
 
-.texts > p {
-    font-size: 5px;
+.firstrow, .secondrow {
+    border: 2px solid black;
+    border-radius: 25px
 }
 
-.vm, .braw {
+.firstrow {
+    grid-column: span 2;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input, textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+.inline {
+    width: unset;
+    vertical-align: middle;
+    margin: 0 0.5em 0 0
+}
+
+.inline {
     display: inline;
 }
