@@ -7,19 +7,6 @@ window.onload = function() {
   }
 };
 
-const nameInput = document.getElementById("name")
-const dobInput = document.getElementById("dob")
-const submitButton = document.getElementById("submit")
-
-nameInput.addEventListener("keyup", function(event){
-    var fullName = nameInput.value
-    if (fullName == "") {
-        submitButton.disabled = true
-    } else {
-        submitButton.disabled = false
-    }
-});
-
 let currentIndex = 0
 const images = document.querySelectorAll(".sliding-image")
 const totalImages = images.length 
@@ -30,4 +17,15 @@ function changeImage() {
     images[currentIndex].style.display = "block"
 }
 
-setInterval(changeImage, 2000)
+setInterval(changeImage, 2000);
+
+const nameInput = document.getElementById("name")
+const submitButton = document.getElementById("submit")
+
+nameInput.addEventListener("input", () => {
+    if (nameInput.value.trim() !== "") {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+  });

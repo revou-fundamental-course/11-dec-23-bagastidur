@@ -24,27 +24,32 @@ html {
 }
 
 body {
+    background-color: #222831;
+    color: #EEEEEE;
+    letter-spacing: 1.5px;
     font-family: 'coolvetica';
-    margin: 0;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .head {
-    background-image: linear-gradient(90deg, white, grey);
-    padding: 100px
+    padding: 10px
 }
 
 .header-wrapper {
+    margin-left: unset;
+    margin-right: unset;
     display: flex;
     justify-content: space-between
 }
 
 .menu {
     display: flex;
-    margin: 2px;
 }
 
 .button {
-    background-color: white;
+    background-color: #222831;
+    color: #EEEEEE;
     margin: 2px;
     font-family: coolvetica;
     border: none;
@@ -58,7 +63,7 @@ a {
 }
 
 button:hover {
-    box-shadow: 2px 2px 2px gray
+    box-shadow: 2px 2px 2px grey;
 }
 
 .logo {
@@ -92,12 +97,15 @@ h1, h2, h3, p {
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: 25px;
+    padding: 75px;
 }
 
 .firstrow, .secondrow {
-    border: 2px solid black;
-    border-radius: 25px
+    border: 2px solid rgba(57, 62, 70, 75%);
+    border-radius: 25px;
+    padding: 20px;
+    background-color: rgba(57, 62, 70, 75%)
 }
 
 .firstrow {
@@ -110,6 +118,7 @@ label {
 }
 
 input, textarea {
+    
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
