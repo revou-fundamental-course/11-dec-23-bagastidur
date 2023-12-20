@@ -1,0 +1,77 @@
+@media only screen and (max-width: 600px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        align-self: center;
+    }
+}
+
+body {
+    font-family: system-ui;
+}
+
+.head {
+    background-image: url("assets/bg.jpg");
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between
+}
+
+.menu {
+    display: flex;
+    margin: 2px;
+}
+
+button {
+    background-color: white;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.logo {
+    display: flex;
+    max-width: 30px;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+.pics {
+    display: flex;
+    justify-content: space-around;
+}
+
+.me, .vm, .braw {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.texts {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.texts > p {
+    font-size: 5px;
+}
+
+.vm, .braw {
+    display: inline;
+}
