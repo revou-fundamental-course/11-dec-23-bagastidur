@@ -70,6 +70,14 @@ h1, h2, h3, p {
     text-align: center;
 }
 
+.sliding-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
 .me, .vm, .braw {
     display: block;
     margin: auto;
@@ -115,4 +123,9 @@ input, textarea {
 
 .inline {
     display: inline;
+}
+
+.submit {
+    width: 100%;
+    border-radius: 5px;
 }
