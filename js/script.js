@@ -31,17 +31,23 @@ nameInput.addEventListener("input", () => {
 });
 
 function validateForm() {
-  const textarea = document.getElementById("message");
-  const textLength = textarea.value.trim().length;
+  let name = document.forms["form-section"]["name"].value;
+  let birthDate = document.forms["form-section"]["dob"].value;
+  let gender = document.forms["form-section"]["gender"].value;
+  let messages = document.forms["form-section"]["message"].value;
+  let timeNow = new Date();
 
-  if (textLength < 10) {
-    alert("Please enter at least 10 characters in the textarea.");
-    textarea.focus(); 
-    return false; 
+  let messageReturn = document.getElementById("returnText");
+
+  if (messageReturn.classList == "returnText") {
+    messageReturn.classList.toggle("returnText");
   }
 
-  return true; 
-}
+  document.getElementById("time-api").innerHTML = timeNow;
+  document.getElementById("sender-name").innerHTML = name;
+  document.getElementById("sender-dob").innerHTML = birthDate;
+  document.getElementById("sender-gender").innerHTML = gender;
+  document.getElementById("sender-message").innerHTML = messages;
 
-const form = document.getElementById("form-section");
-form.addEventListener("submit", validateForm);
+  return false;
+}
